@@ -1,23 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import AMM from "../../../../public/image/aungmyomyat.jpg";
-import { motion } from "framer-motion"
 const Page = () => {
   return (
-    <motion.div
-        animate={{ x: 100 }}
+    <div
       className={"w-full max-w-6xl h-screen flex justify-center items-center"}
     >
       <div>
         <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72"} />
       </div>
 
-      <div className={"flex flex-col ml-24 text-center font-sans"}>
+      <div className={"flex flex-col ml-24 text-center"}>
         <span className={"text-gray-600 font-semibold"}>Hello I'm</span>
-        <span className={"text-black font-bold text-4xl my-3"}>
+        <span className={"text-black font-bold text-5xl my-5"}>
           Aung Myo Myat
         </span>
-        <span className={"text-gray-600 text-2xl font-semibold"}>
+        <span className={"text-gray-600 text-3xl font-semibold"}>
           Frontend Developer
         </span>
 
@@ -99,7 +97,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
