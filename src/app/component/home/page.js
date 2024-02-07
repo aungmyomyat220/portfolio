@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import AMM from "../../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
-// import IconComponent from './icon'
+import Icon from './icon'
 import Buttons from './button'
 const Page = () => {
   return (
@@ -11,7 +11,7 @@ const Page = () => {
       className={"w-full max-w-6xl h-screen flex justify-center items-center"}
     >
       <div>
-        <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72 hover:scale-105 transition duration-150"} />
+        <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72 transition delay-150 hover:scale-105"} />
       </div>
 
       <div className={"flex flex-col ml-24 text-center"}>
@@ -37,7 +37,7 @@ const Page = () => {
         <Buttons></Buttons>
 
         {/*Icons*/}
-        {/*<IconComponent></IconComponent>*/}
+        <Icon></Icon>
       </div>
     </div>
   );
