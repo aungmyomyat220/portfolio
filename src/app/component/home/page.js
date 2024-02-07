@@ -4,7 +4,7 @@ import Image from "next/image";
 import AMM from "../../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
 import IconComponent from './icon'
-import Buttons from '../home/button'
+import Buttons from './button'
 const Page = () => {
   return (
     <div
