@@ -52,8 +52,8 @@ const Icon = () => {
               <span
                 className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
               >
-      Linkedin
-    </span>
+              Linkedin
+            </span>
             </button>
           </section>
         </div>
