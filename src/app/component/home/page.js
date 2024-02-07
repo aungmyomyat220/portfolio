@@ -5,7 +5,7 @@ import AMM from "../../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
 import Icon from '../icon/page.js'
 import Buttons from './button'
-const Page = () => {
+const Page = ({theme}) => {
   return (
     <div
       className={"w-full max-w-6xl h-screen flex flex-col sm:flex-row justify-center items-center"}
@@ -15,26 +15,29 @@ const Page = () => {
       </div>
 
       <div className={"flex flex-col sm:ml-24 text-center mt-16"}>
-        <span className={"text-gray-600 font-semibold"}>Hello I&apos;m</span>
-        <span className={"text-black font-bold sm:text-5xl text-4xl my-5"}>
+        <span className={"${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} text-gray-600 font-semibold"}>Hello I&apos;m</span>
+        <span className={`${theme === 'dark'?'text-white':'text-black'} font-bold sm:text-5xl text-4xl my-5`}>
           Aung Myo Myat
         </span>
-        <TypeAnimation
-          className={"text-gray-600 sm:text-3xl text-lg font-semibold"}
-          sequence={[
-            'FrontEnd Developer',
-            1000,
-            'BackEnd Developer',
-            1000,
-          ]}
-          wrapper="span"
-          speed={50}
-          style={{ fontSize: '2em', display: 'inline-block' }}
-          repeat={Infinity}
-        />
+          <div className={`${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} font-semibold`}>
+            <TypeAnimation
+              sequence={[
+                'FullStack Developer',
+                1000,
+                'React Developer',
+                1000,
+                'Java Developer',
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: '2em', display: 'inline-block' }}
+              repeat={Infinity}
+            />
+          </div>
 
         {/*Button*/}
-        <Buttons></Buttons>
+        <Buttons theme={theme}></Buttons>
 
         {/*Icons*/}
         <Icon></Icon>
