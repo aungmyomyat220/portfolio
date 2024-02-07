@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import AMM from "../../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
-import IconComponent from './icon'
+// import IconComponent from './icon'
 import Buttons from './button'
 const Page = () => {
   return (
@@ -37,7 +37,7 @@ const Page = () => {
         <Buttons></Buttons>
 
         {/*Icons*/}
-        <IconComponent></IconComponent>
+        {/*<IconComponent></IconComponent>*/}
       </div>
     </div>
   );
