@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-const Icon = () => {
+const Page = () => {
   return (
     <div>
       {/*Icon*/}
@@ -61,4 +61,4 @@ const Icon = () => {
   )
 }
 
-export default Icon
+export default Page
