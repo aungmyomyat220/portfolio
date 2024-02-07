@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import AMM from "../../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
-import Icon from '../icon/icon.jsx'
+import Icon from '../icon/page.js'
 import Buttons from './button'
 const Page = () => {
   return (
