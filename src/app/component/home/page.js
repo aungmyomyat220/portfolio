@@ -11,7 +11,7 @@ const Page = () => {
       className={"w-full max-w-6xl h-screen flex justify-center items-center"}
     >
       <div>
-        <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72"} />
+        <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72 hover:scale-105 transition duration-150"} />
       </div>
 
       <div className={"flex flex-col ml-24 text-center"}>
