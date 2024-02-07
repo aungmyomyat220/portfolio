@@ -15,7 +15,7 @@ const Page = () => {
       </div>
 
       <div className={"flex flex-col ml-24 text-center"}>
-        <span className={"text-gray-600 font-semibold"}>Hello I'm</span>
+        <span className={"text-gray-600 font-semibold"}>Hello I&apos;m</span>
         <span className={"text-black font-bold text-5xl my-5"}>
           Aung Myo Myat
         </span>
