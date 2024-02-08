@@ -24,7 +24,7 @@ const Page = ({theme,onThemeChange}) => {
         <div className={'hidden sm:block'}>
           <span className={'mr-6'}>About</span>
           <span className={'mr-6'}>
-            <Link href={'./experience'}>Experience</Link>
+            <Link href='#experience'>Experience</Link>
           </span>
           <span className={'mr-6'}>Projects</span>
           <span>Contact</span>
