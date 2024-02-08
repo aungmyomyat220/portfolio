@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-const Page = () => {
+const Page = ({theme}) => {
   return (
     <div>
       {/*Icon*/}
@@ -23,7 +23,7 @@ const Page = () => {
                 ></path>
               </svg>
               <span
-                className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700">
+                className={`absolute opacity-0 group-hover:opacity-100 ${theme === 'dark'? 'group-hover:text-gray-400' : 'group-hover:text-gray-700' }  group-hover:text-sm group-hover:-translate-y-10 duration-700`}>
                 GitHub
               </span>
             </button>
@@ -49,7 +49,7 @@ const Page = () => {
                 ></path>
               </svg>
               <span
-                className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
+                className={`absolute opacity-0 group-hover:opacity-100 ${theme === 'dark'? 'group-hover:text-gray-400' : 'group-hover:text-gray-700' }  group-hover:text-sm group-hover:-translate-y-10 duration-700`}
               >
               Linkedin
             </span>

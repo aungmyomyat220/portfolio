@@ -1,9 +1,10 @@
 'use client'
-import MenuBar from '../../../../public/image/menu.png'
+import MenuBar from '../../../public/image/menu.png'
 import Image from 'next/image'
-import Light from '../../../../public/image/sun.png'
-import Dark from '../../../../public/image/night-mode.png'
+import Light from '../../../public/image/sun.png'
+import Dark from '../../../public/image/night-mode.png'
 import { useState } from 'react'
+import Link from 'next/link'
 const Page = ({theme,onThemeChange}) => {
     const handleClick = () => {
       onThemeChange(!theme);
@@ -22,7 +23,9 @@ const Page = ({theme,onThemeChange}) => {
         </div>
         <div className={'hidden sm:block'}>
           <span className={'mr-6'}>About</span>
-          <span className={'mr-6'}>Experience</span>
+          <span className={'mr-6'}>
+            <Link href={'./experience'}>Experience</Link>
+          </span>
           <span className={'mr-6'}>Projects</span>
           <span>Contact</span>
         </div>

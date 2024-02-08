@@ -13,7 +13,7 @@ const Button = ({theme}) => {
         </button>
         <button
           className={
-            `ml-5 bg-black text-white rounded-full mt-5 py-3 px-4 border ${theme==='dark'?'border-white':'border-black'} text-sm font-semibold transition delay-100 hover:scale-105`
+            `ml-5 ${theme==='dark'?'bg-transparent':'bg-black'} text-white rounded-full mt-5 py-3 px-4 border ${theme==='dark'?'border-white':'border-black'} text-sm font-semibold transition delay-100 hover:scale-105`
           }
         >
           Contact Info

@@ -1,9 +1,9 @@
 'use client'
 import React from "react";
 import Image from "next/image";
-import AMM from "../../../../public/image/aungmyomyat.jpg";
+import AMM from "../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
-import Icon from '../icon/page.js'
+import Icon from '@/app/icon/page.js'
 import Buttons from './button'
 const Page = ({theme}) => {
   return (
@@ -14,8 +14,8 @@ const Page = ({theme}) => {
         <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72 transition delay-100 hover:scale-105"} />
       </div>
 
-      <div className={"flex flex-col sm:ml-24 text-center mt-16"}>
-        <span className={"${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} text-gray-600 font-semibold"}>Hello I&apos;m</span>
+      <div className={"flex flex-col sm:ml-24 text-center mt-5"}>
+        <span className={`${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} font-semibold`}>Hello I&apos;m</span>
         <span className={`${theme === 'dark'?'text-white':'text-black'} font-bold sm:text-5xl text-4xl my-5`}>
           Aung Myo Myat
         </span>
@@ -40,7 +40,7 @@ const Page = ({theme}) => {
         <Buttons theme={theme}></Buttons>
 
         {/*Icons*/}
-        <Icon></Icon>
+        <Icon theme={theme}></Icon>
       </div>
     </div>
   );
