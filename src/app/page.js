@@ -11,7 +11,7 @@ export default function Home() {
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
   return (
-    <div className={`${theme === 'dark'?'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin`}>
+    <div className={`${theme === 'dark'?'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin scroll-smooth`}>
         <ThemeContext.Provider value={theme}>
             <NavBar theme={theme} onThemeChange={toggleTheme}></NavBar>
         </ThemeContext.Provider>
