@@ -1,9 +1,7 @@
 import React from 'react'
-import { motion, useScroll } from "framer-motion"
 import Image from 'next/image'
 import mintheinkha from "../../../public/image/mintheinkhalogo.png";
 const Page = () => {
-  const { scrollYProgress } = useScroll();
   return (
     <div className={"w-full h-screen flex justify-center items-center"} id='experience'>
       <div className={'w-full h-screen max-w-6xl flex justify-center items-center'}>
