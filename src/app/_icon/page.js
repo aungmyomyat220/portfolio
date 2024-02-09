@@ -9,7 +9,9 @@ const Page = ({theme}) => {
         {/*GitHub*/}
         <div className={'mt-8'}>
           <section className="flex justify-center items-center">
-            <button
+            <a
+               href={'https://github.com/aungmyomyat220'}
+               target='_blank'
               className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
             >
               <svg
@@ -26,13 +28,15 @@ const Page = ({theme}) => {
                 className={`absolute opacity-0 group-hover:opacity-100 ${theme === 'dark'? 'group-hover:text-gray-400' : 'group-hover:text-gray-700' }  group-hover:text-sm group-hover:-translate-y-10 duration-700`}>
                 GitHub
               </span>
-            </button>
+            </a>
           </section>
         </div>
         {/*LinkedIn*/}
         <div className={'mt-8 ml-3'}>
           <section className="flex justify-center items-center">
-            <button
+            <a
+                href={'https://www.linkedin.com/in/aung-myo-myat-33b4941a4/'}
+                target='_blank'
               className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-[#0077b5] from-gray-800 text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
             >
               <svg
@@ -53,7 +57,7 @@ const Page = ({theme}) => {
               >
               Linkedin
             </span>
-            </button>
+            </a>
           </section>
         </div>
       </div>

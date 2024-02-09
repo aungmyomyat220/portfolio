@@ -26,7 +26,9 @@ const Page = ({theme,onThemeChange}) => {
           <span className={'mr-6'}>
             <Link href='#experience'>Experience</Link>
           </span>
-          <span className={'mr-6'}>Projects</span>
+          <span className={'mr-6'}>
+              <Link href='#project'>Projects</Link>
+          </span>
           <span>Contact</span>
         </div>
       </div>

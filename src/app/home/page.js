@@ -3,12 +3,12 @@ import React from "react";
 import Image from "next/image";
 import AMM from "../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
-import Icon from '@/app/icon/page.js'
+import Icon from '@/app/_icon/page.js'
 import Buttons from './button'
 const Page = ({theme}) => {
   return (
     <div
-      className={"w-full max-w-6xl h-screen flex flex-col sm:flex-row justify-center items-center"}
+      className={"w-full h-screen max-w-6xl flex flex-col sm:flex-row justify-center items-center"}
     >
       <div>
         <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72 transition delay-100 hover:scale-105"} />
