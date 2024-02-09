@@ -9,14 +9,16 @@ export default function Home() {
 
     const toggleTheme = (data) => {
         setTheme(theme === 'light' ? 'dark' : 'light');
+        localStorage.setItem('theme',theme)
     };
+    const color = localStorage.getItem('theme')
   return (
-    <div className={`${theme === 'dark'?'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin scroll-smooth`}>
+    <div className={`${color === 'dark'?'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin scroll-smooth`}>
         <ThemeContext.Provider value={theme}>
-            <NavBar theme={theme} onThemeChange={toggleTheme}></NavBar>
+            <NavBar theme={color} onThemeChange={toggleTheme}></NavBar>
         </ThemeContext.Provider>
-      <HomePage theme={theme}></HomePage>
-      <Experience theme={theme}></Experience>
+      <HomePage theme={color}></HomePage>
+      <Experience theme={color}></Experience>
     </div>
   );
 }
