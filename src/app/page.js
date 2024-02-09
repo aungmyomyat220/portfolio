@@ -12,15 +12,18 @@ export default function Home() {
         setTheme(theme === 'light' ? 'dark' : 'light');
         localStorage.setItem('theme',theme)
     };
-    const color = localStorage.getItem('theme')
+    if (typeof window !== 'undefined' && window.localStorage) {
+        const color = localStorage.getItem('theme')
+        setTheme(color)
+    }
   return (
     <div id='home' className={`${color === 'dark'?'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin scroll-smooth`}>
         <ThemeContext.Provider value={theme}>
-            <NavBar theme={color} onThemeChange={toggleTheme}></NavBar>
+            <NavBar theme={theme} onThemeChange={toggleTheme}></NavBar>
         </ThemeContext.Provider>
-        <HomePage theme={color}></HomePage>
-        <Experience theme={color}></Experience>
-        <Project theme={color}></Project>
+        <HomePage theme={theme}></HomePage>
+        <Experience theme={theme}></Experience>
+        <Project theme={theme}></Project>
     </div>
   );
 }
