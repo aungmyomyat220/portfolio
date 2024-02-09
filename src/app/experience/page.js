@@ -14,8 +14,7 @@ const Page = () => {
           <div className={'grid grid-cols-3 grid-rows-2 gap-5'}>
             <div className={'group relative w-60 h-60 flex justify-center items-center overflow-hidden rounded-lg'}>
               <Image src={mintheinkha} alt='test' className={'w-60 h-60 rounded-lg group-hover:opacity-30 group-hover:transition delay-100 group-hover:scale-110'}/>
-              <div className={'absolute w-60 h-60 flex justify-center rounded-lg items-center opacity-0' +
-                ' group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
+              <div className={'absolute w-60 h-60 flex justify-center rounded-lg items-center opacity-0 group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
               </div>
             </div>
           </div>
