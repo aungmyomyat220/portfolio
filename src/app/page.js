@@ -18,7 +18,7 @@ export default function Home() {
     }, []);
 
   return (
-    <div id='home' className={`${theme === 'dark'?'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin !scroll-smooth`}>
+    <div id='home' className={`${theme === 'dark'?'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin scroll-smooth`}>
         <NavBar theme={theme} onThemeChange={toggleTheme}></NavBar>
         <HomePage theme={theme}></HomePage>
         <Experience theme={theme}></Experience>
