@@ -24,7 +24,7 @@ const Page = ({theme}) => {
           {/*Projects*/}
           <div
               className={`grid grid-cols-3 grid-rows-2 gap-7 ${animate && 'animate-fade-right animate-once animate-duration-900 animate-delay-900'}`}>
-            <Link href='https://bay-din-app-two.vercel.app' target='_blank' className={'group relative w-60 h-60 flex justify-center items-center overflow-hidden rounded-lg'}>
+            <Link href='https://bay-din-app-two.vercel.app' className={'group relative w-60 h-60 flex justify-center items-center overflow-hidden rounded-lg'}>
               <Image src={mintheinkha} alt='lathtaukbaydin'
                      className={'w-60 h-60 rounded-lg group-hover:opacity-30 group-hover:transition delay-100 group-hover:scale-110'}/>
               <div
