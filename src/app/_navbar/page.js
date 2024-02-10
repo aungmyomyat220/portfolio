@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 const Page = ({theme,onThemeChange}) => {
     const handleClick = (data) => {
-        onThemeChange(data);
+      onThemeChange(data);
     };
   return (
     <div className={`flex flex-row sm:justify-between w-full max-w-6xl mt-8 font-semibold text-lg cursor-pointer px-7 ${theme === 'dark'?'text-white':'text-black'}`}>
@@ -17,8 +17,8 @@ const Page = ({theme,onThemeChange}) => {
         <div>
           {
             theme==='light'?
-              <Image src={Dark} alt='dark mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick('dark')}/> :
-              <Image src={Light} alt='light mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick('light')}/>
+              <Image src={Dark} alt='dark mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick(true)}/> :
+              <Image src={Light} alt='light mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick(false)}/>
           }
         </div>
         <div className={'hidden sm:block'}>

@@ -8,18 +8,14 @@ const ThemeContext = createContext("dark")
 export default function Home() {
     const [theme, setTheme] = useState('light');
 
-    const toggleTheme = (data) => {
-        if(data === 'light'){
-            setTheme('light');
-            localStorage.setItem('theme',"light")
-        }else
-            setTheme('dark')
-            localStorage.setItem('theme',"dark")
+    const toggleTheme = (darkMode) => {
+        setTheme(darkMode? 'dark' : 'light');
+        localStorage.setItem('darkMode',darkMode)
     };
 
     useEffect(() => {
-        const color = localStorage.getItem('theme')
-        setTheme(color)
+        const darkMode = localStorage.getItem("darkMode")
+        setTheme(darkMode ? 'dark' : 'light')
     }, []);
 
   return (
