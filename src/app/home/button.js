@@ -3,7 +3,7 @@ import React from 'react'
 const Button = ({theme}) => {
   return (
     <div>
-      <div className={'mt-3'}>
+      <div>
         <button
           className={
             `${theme==='dark'&&"bg-white"} rounded-full mt-5 py-3 px-4 border border-black text-sm font-semibold transition delay-100 hover:scale-105`

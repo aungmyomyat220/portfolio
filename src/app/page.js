@@ -5,7 +5,7 @@ import Project from '@/app/project/page'
 import Experience from '@/app/experience/page'
 import {createContext, useEffect, useState} from "react";
 export default function Home() {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     const toggleTheme = (data) => {
         setTheme(data === 'dark' ? 'dark' : 'light');

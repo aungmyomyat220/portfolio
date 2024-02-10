@@ -8,7 +8,7 @@ import Buttons from './button'
 const Page = ({theme}) => {
   return (
     <div
-      className={"w-full h-screen max-w-6xl flex flex-col sm:flex-row justify-center items-center"}
+      className={"w-full h-screen sm:h-full max-w-6xl flex flex-col sm:flex-row justify-center items-center sm:mt-28 sm:mb-72 mb-36"}
     >
       <div>
         <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72 transition delay-100 hover:scale-105"} />
