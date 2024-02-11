@@ -2,6 +2,8 @@
 import React, {useState} from 'react';
 import { useInView } from 'react-intersection-observer';
 import {useIntersectionObserver} from "@/app/_animation/animation";
+import Image from "next/image";
+import arrow from "../../../public/image/up-arrow.png";
 const Page = ({theme}) => {
     const [animate,setAnimate] = useState(false)
     const cbRef = useIntersectionObserver({ threshold: 1 }, (entries) => {
@@ -10,10 +12,13 @@ const Page = ({theme}) => {
         })
     })
     return (
-        <div className={`w-full h-full flex justify-center items-center sm:mb-56 mb-72 ${theme==='dark'?'text-white': 'text-black'}`} >
+        <div className={`relative w-full h-screen flex justify-center items-center sm:mb-56 mb-72 ${theme==='dark'?'text-white': 'text-black'}`} >
             <div className={'w-full h-screen max-w-6xl flex flex-col justify-center items-center'}>
-                <span className={`font-semibold text-4xl mb-10 pt-5`} id='experience'>My Journey</span>
-                <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical px-5">
+                <span className={`font-semibold text-4xl mb-10 pt-5`}  id='experience'>My Journey</span>
+
+                {/*TimeLine*/}
+                <span>
+                    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical px-5">
                     <li>
                         <hr/>
                         <div className="timeline-middle">
@@ -29,8 +34,8 @@ const Page = ({theme}) => {
                             <div ref={cbRef}/>
                             <span className='italic'>2014-2020</span>
                             <span className='font-bold text-xl'>University Student</span>
-                            <span>Mawlamyine Technology University</span>
-                            <span>My university life has been a wonderful journey of learning, discovery, and growth. I have met many amazing people, explored new ideas, and developed valuable skills that will help me in my future endeavors. I have also enjoyed the freedom and flexibility of managing my own time and schedule, while also facing various challenges and opportunities.</span>
+                            <span className={'text-[#5F9DF7]'}>Mawlamyine Technology University</span>
+                            <span>Studied Information Technology with a focus on Computer Science and programming. Delved into various languages and concepts, aiming to contribute to the dynamic tech field.</span>
                         </div>
                         <hr/>
                     </li>
@@ -48,8 +53,8 @@ const Page = ({theme}) => {
                             className={`timeline-end text-left pb-12 timeline-snap-icon flex flex-col ${animate && 'animate-fade-left animate-once animate-duration-[500ms] animate-delay-300'}`}>
                             <span className='italic'>2022-2023</span>
                             <span className='font-bold text-xl'>Quality Assurance Engineer</span>
-                            <span>Qualy Myanmar</span>
-                            <span>As a dedicated Quality Assurance (QA) Engineer, I possess a proven track record of ensuring the delivery of high-quality software products through comprehensive testing methodologies and meticulous attention to detail. With a keen eye for identifying potential issues and a commitment to delivering exceptional user experiences, I consistently contribute to the success of projects across various domains.</span>
+                            <span className={'text-[#5F9DF7]'}>Qualy Myanmar</span>
+                            <span>QA Engineer at Qualy Myanmar, Mawlamyine. Ensuring top-notch software quality through rigorous testing and attention to detail, contributing to the company's reputation for excellence in the tech industry.</span>
                         </div>
                         <hr/>
                     </li>
@@ -59,8 +64,8 @@ const Page = ({theme}) => {
                             className={`timeline-start sm:text-right text-left timeline-snap-icon flex flex-col ${animate && 'animate-fade-right animate-once animate-duration-[500ms] animate-delay-300'}`}>
                             <span className='italic'>2023-Present</span>
                             <span className='font-bold text-xl'>Web Developer</span>
-                            <span>GIC Myanmar</span>
-                            <span>As a skilled and creative Web Developer, I specialize in crafting elegant and functional web solutions that meet the unique needs of clients and users alike. With a strong foundation in front-end and back-end development technologies, coupled with a passion for creating intuitive user experiences, I consistently deliver high-quality websites and web applications that drive engagement and achieve business objectives.</span>
+                            <span className={'text-[#5F9DF7]'}>GIC Myanmar</span>
+                            <span>As a web developer at GIC Myanmar, I&apos;m dedicated to crafting engaging and efficient online experiences. Leveraging cutting-edge technologies and innovative design principles, I strive to create websites that captivate audiences and drive business growth.</span>
                         </div>
                         <div className="timeline-middle">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -73,6 +78,15 @@ const Page = ({theme}) => {
                         <hr/>
                     </li>
                 </ul>
+                </span>
+
+                {/*Button*/}
+                <span className={'absolute right-0 bottom-0 mb-10 mr-5'}>
+                <a href='#home'
+                   className={`w-14 h-14 rounded-full ${theme === 'dark' ? 'bg-white' : 'bg-dark'} flex justify-center items-center animate-bounce`}>
+                    <Image src={arrow} alt='arrow' width={0} height={0} className={'w-5 h-5'}/>
+                </a>
+          </span>
             </div>
         </div>
     );

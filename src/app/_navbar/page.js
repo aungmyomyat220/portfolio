@@ -21,20 +21,23 @@ const Page = ({theme,onThemeChange}) => {
               <Image src={Light} alt='light mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick('light')}/>
           }
         </div>
-        <div className={'hidden sm:block'}>
-          <span className={'mr-6'}>About</span>
-          <span className={'mr-6'}>
-            <Link href='#experience'>Experience</Link>
-          </span>
-          <span className={'mr-6'}>
-              <Link href='#project'>Projects</Link>
-          </span>
-          <span>Contact</span>
-        </div>
+          <div className={'hidden sm:block'}>
+              <span className={'mr-6'}>About</span>
+              <span className={'mr-6'}>
+                    <Link href='#techstack'>TechStack</Link>
+              </span>
+              <span className={'mr-6'}>
+                <Link href='#experience'>Experience</Link>
+              </span>
+              <span className={'mr-6'}>
+                <Link href='#project'>Projects</Link>
+              </span>
+              <span>Contact</span>
+          </div>
       </div>
 
-      <div className={'sm:hidden ml-3'}>
-        <Image src={MenuBar} alt='menu bar' className={'w-7 h-7'}/>
+        <div className={'sm:hidden ml-3'}>
+            <Image src={MenuBar} alt='menu bar' className={'w-7 h-7'}/>
       </div>
     </div>
   );
