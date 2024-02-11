@@ -5,6 +5,7 @@ import {useIntersectionObserver} from "@/app/_animation/animation";
 import Image from "next/image";
 import arrow from "../../../public/image/up-arrow.png";
 const Page = ({theme}) => {
+    console.log(theme)
     const [animate,setAnimate] = useState(false)
     const cbRef = useIntersectionObserver({ threshold: 1 }, (entries) => {
         entries.forEach((entry) => {
@@ -81,9 +82,9 @@ const Page = ({theme}) => {
                 </span>
 
                 {/*Button*/}
-                <span className={'absolute right-0 bottom-0 mb-10 mr-5'}>
+                <span className={`absolute right-0 bottom-0 mb-10 mr-5 animate-bounce rounded-full ${theme==='dark'?'bg-white':'bg-[#adb4bf]'}`}>
                 <a href='#home'
-                   className={`w-14 h-14 rounded-full ${theme === 'dark' ? 'bg-white' : 'bg-dark'} flex justify-center items-center animate-bounce`}>
+                   className={`w-14 h-14 rounded-full ${theme === 'dark' ? 'bg-white' : 'bg-dark'} flex justify-center items-center`}>
                     <Image src={arrow} alt='arrow' width={0} height={0} className={'w-5 h-5'}/>
                 </a>
           </span>

@@ -10,6 +10,7 @@ import {useIntersectionObserver} from "@/app/_animation/animation";
 import Link from "next/link";
 
 const Page = ({theme}) => {
+  console.log(theme)
   const [animate,setAnimate] = useState(false)
   const cbRef = useIntersectionObserver({ threshold: 1 }, (entries) => {
     entries.forEach((entry) => {
@@ -27,7 +28,7 @@ const Page = ({theme}) => {
           {/*Projects*/}
           <div
               className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-1 sm:grid-rows-2 gap-7 ${animate && 'animate-fade-right animate-once animate-duration-900 animate-delay-900'}`}>
-            <Link href='https://bay-din-app-two.vercel.app'
+            <Link href='https://bay-din-app-two.vercel.app' target='_blank'
                   className={'group relative w-60 h-60 flex justify-center items-center overflow-hidden rounded-lg'}>
               <Image src={mintheinkha} alt='lathtaukbaydin'
                      className={'w-60 h-60 rounded-lg group-hover:opacity-30 group-hover:transition delay-100 group-hover:scale-110'}/>
@@ -43,7 +44,7 @@ const Page = ({theme}) => {
               <div
                   className={'absolute w-60 h-60 flex justify-center rounded-lg items-center opacity-0 group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
                 <span
-                    className={'group-hover:text-5xl group-hover:text-white opacity-100 z-10 font-serif'}>My Blog</span>
+                    className={`text-4xl font-serif ${theme === 'dark'?'text-white':'text-black'}`}>My Blog</span>
               </div>
             </Link>
 
@@ -53,7 +54,7 @@ const Page = ({theme}) => {
                      className={'w-60 h-60 rounded-lg group-hover:opacity-30 group-hover:transition delay-100 group-hover:scale-110'}/>
               <div
                   className={'absolute w-60 h-60 flex justify-center rounded-lg items-center z-10 opacity-0 group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
-                  <span className={'group-hover:text-5xl group-hover:text-white opacity-100 z-10 font-serif'}>Chat App</span>
+                  <span className={`text-4xl font-serif ${theme === 'dark'?'text-white':'text-black'}`}>Chat App</span>
               </div>
             </Link>
 
@@ -62,15 +63,15 @@ const Page = ({theme}) => {
               <Image src={os} alt='myblog'
                      className={'w-60 h-60 rounded-lg group-hover:opacity-30 group-hover:transition delay-100 group-hover:scale-110'}/>
               <div
-                  className={'absolute w-60 h-60 flex justify-center rounded-lg items-center z-10 opacity-0 group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
-                <span className={'group-hover:text-5xl group-hover:text-white opacity-100 z-10 font-serif'}>Shopping</span>
+                  className={'absolute w-60 h-60 flex justify-center rounded-lg items-center opacity-0 group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
+                <span className={`text-4xl font-serif ${theme === 'dark'?'text-white':'text-black'}`}>E-commerce</span>
               </div>
             </Link>
 
           </div>
-          <span className={'absolute right-0 bottom-0 mb-10 mr-5'}>
+          <span className={`absolute right-0 bottom-0 mb-10 mr-5 rounded-full ${theme==='dark'?'bg-white':'bg-[#adb4bf] animate-bounce'}`}>
             <a href='#home'
-                className={`w-14 h-14 rounded-full ${theme === 'dark' ? 'bg-white' : 'bg-dark'} flex justify-center items-center ${animate && 'animate-bounce animate-infinite animate-duration-1000 animate-delay-300'}`}>
+                className={`w-14 h-14 rounded-full flex justify-center items-center`}>
                 <Image src={arrow} alt='arrow' width={0} height={0} className={'w-5 h-5'}/>
              </a>
           </span>
