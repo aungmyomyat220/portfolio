@@ -54,7 +54,7 @@ const Page = ({theme}) => {
                             <span className='italic'>2022-2023</span>
                             <span className='font-bold text-xl'>Quality Assurance Engineer</span>
                             <span className={'text-[#5F9DF7]'}>Qualy Myanmar</span>
-                            <span>QA Engineer at Qualy Myanmar, Mawlamyine. Ensuring top-notch software quality through rigorous testing and attention to detail, contributing to the company's reputation for excellence in the tech industry.</span>
+                            <span>QA Engineer at Qualy Myanmar, Mawlamyine. Ensuring top-notch software quality through rigorous testing and attention to detail, contributing to the company&apos;s reputation for excellence in the tech industry.</span>
                         </div>
                         <hr/>
                     </li>
