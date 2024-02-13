@@ -10,7 +10,6 @@ import {useIntersectionObserver} from "@/app/_animation/animation";
 import Link from "next/link";
 
 const Page = ({theme}) => {
-  console.log(theme)
   const [animate,setAnimate] = useState(false)
   const cbRef = useIntersectionObserver({ threshold: 1 }, (entries) => {
     entries.forEach((entry) => {
@@ -22,9 +21,8 @@ const Page = ({theme}) => {
     <div className={"w-full h-full flex justify-center items-center relative sm:pb-0 pb-24 mt-40 sm:mt-0"} id='project'>
       <div className={'w-full h-screen max-w-6xl flex justify-center items-center'}>
         <div className={'flex justify-center flex-col w-full h-screen items-center'}>
-          <div ref={cbRef}></div>
           <span
-              className={`${theme === 'dark' && 'text-white'} font-semibold text-4xl mb-10 text-center ${animate && 'animate-fade-up animate-once animate-duration-[1000ms] animate-delay-500'}'}`}>My Latest Projects</span>
+              className={`${theme === 'dark' && 'text-white'} font-semibold text-4xl mb-10 text-center ${animate && 'animate-fade-up animate-once animate-duration-[1000ms] animate-delay-500'}'}`} ref={cbRef}>My Recent Works</span>
           {/*Projects*/}
           <div
               className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-1 sm:grid-rows-2 gap-7 ${animate && 'animate-fade-right animate-once animate-duration-900 animate-delay-900'}`}>
@@ -37,14 +35,15 @@ const Page = ({theme}) => {
               </div>
             </Link>
 
-            <Link href='https://myblog-two-lake.vercel.app' target='_blank'
+            <Link href="https://myblog-two-lake.vercel.app" target="_blank"
                   className={'group relative w-60 h-60 flex justify-center items-center overflow-hidden rounded-lg'}>
-              <Image src={myblog} alt='myblog'
+              <div className={'absolute'}></div>
+              <Image src={myblog} alt="myblog"
                      className={'w-60 h-60 rounded-lg group-hover:opacity-30 group-hover:transition delay-100 group-hover:scale-110'}/>
               <div
-                  className={'absolute w-60 h-60 flex justify-center rounded-lg items-center opacity-0 group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
+                className={'absolute w-60 h-60 flex justify-center rounded-lg items-center opacity-0 group-hover:transition delay-100 group-hover:opacity-50 backdrop-opacity-10'}>
                 <span
-                    className={`text-4xl font-serif ${theme === 'dark'?'text-white':'text-black'}`}>My Blog</span>
+                  className={`text-4xl font-serif ${theme === 'dark' ? 'text-white' : 'text-black'}`}>My Blog</span>
               </div>
             </Link>
 

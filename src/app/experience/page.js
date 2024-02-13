@@ -1,11 +1,9 @@
 'use client'
 import React, {useState} from 'react';
-import { useInView } from 'react-intersection-observer';
 import {useIntersectionObserver} from "@/app/_animation/animation";
 import Image from "next/image";
 import arrow from "../../../public/image/up-arrow.png";
 const Page = ({theme}) => {
-    console.log(theme)
     const [animate,setAnimate] = useState(false)
     const cbRef = useIntersectionObserver({ threshold: 1 }, (entries) => {
         entries.forEach((entry) => {
@@ -13,7 +11,7 @@ const Page = ({theme}) => {
         })
     })
     return (
-        <div className={`relative w-full h-screen flex justify-center items-center sm:mb-56 mb-72 ${theme==='dark'?'text-white': 'text-black'}`} >
+        <div className={`relative w-full h-screen flex justify-center items-center sm:mb-56 mb-44 ${theme==='dark'?'text-white': 'text-black'}`} >
             <div className={'w-full h-screen max-w-6xl flex flex-col justify-center items-center'}>
                 <span className={`font-semibold text-4xl mb-10 pt-5`}  id='experience'>My Journey</span>
 
@@ -31,8 +29,7 @@ const Page = ({theme}) => {
                             </svg>
                         </div>
                         <div
-                            className={`${animate && 'animate-fade-right animate-once animate-duration-[500ms] animate-delay-300'} pb-12 timeline-start sm:text-right text-left timeline-snap-icon flex flex-col`}>
-                            <div ref={cbRef}/>
+                            className={`${animate && 'animate-fade-right animate-once animate-duration-[1400ms] animate-delay-300'} pb-12 timeline-start sm:text-right text-left timeline-snap-icon flex flex-col`}>
                             <span className='italic'>2014-2020</span>
                             <span className='font-bold text-xl'>University Student</span>
                             <span className={'text-[#5F9DF7]'}>Mawlamyine Technology University</span>
@@ -51,7 +48,8 @@ const Page = ({theme}) => {
                             </svg>
                         </div>
                         <div
-                            className={`timeline-end text-left pb-12 timeline-snap-icon flex flex-col ${animate && 'animate-fade-left animate-once animate-duration-[500ms] animate-delay-300'}`}>
+                            className={`timeline-end text-left pb-12 timeline-snap-icon flex flex-col ${animate && 'animate-fade-left animate-once animate-duration-[1400ms] animate-delay-300'}`}>
+                            <div ref={cbRef}></div>
                             <span className='italic'>2022-2023</span>
                             <span className='font-bold text-xl'>Quality Assurance Engineer</span>
                             <span className={'text-[#5F9DF7]'}>Qualy Myanmar</span>
@@ -62,7 +60,7 @@ const Page = ({theme}) => {
                     <li>
                         <hr/>
                         <div
-                            className={`timeline-start sm:text-right text-left timeline-snap-icon flex flex-col ${animate && 'animate-fade-right animate-once animate-duration-[500ms] animate-delay-300'}`}>
+                            className={`timeline-start sm:text-right text-left timeline-snap-icon flex flex-col ${animate && 'animate-fade-right animate-once animate-duration-[1400ms] animate-delay-300'}`}>
                             <span className='italic'>2023-Present</span>
                             <span className='font-bold text-xl'>Web Developer</span>
                             <span className={'text-[#5F9DF7]'}>GIC Myanmar</span>
