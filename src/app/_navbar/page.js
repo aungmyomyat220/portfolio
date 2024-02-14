@@ -15,13 +15,16 @@ const Page = ({theme,onThemeChange,panel}) => {
     }
   return (
     <div className={`flex flex-row sm:justify-between w-full max-w-6xl mt-8 font-semibold text-lg cursor-pointer px-7 ${theme === 'dark'?'text-white':'text-black'}`}>
-      <span>Aung Myo Myat</span>
+      <span>
+          <span className={'hover:text-blue-500 hover:transition delay-75 cursor-pointer'}>Aung Myo Myat</span>
+          <span className={'text-blue-500 ml-2'}>Dev</span>
+      </span>
 
-      <div className={'flex flex-row items-center ml-32'}>
-        <div>
-          {
-            theme==='light'?
-              <Image src={Dark} alt='dark mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick('dark')}/> :
+        <div className={'flex flex-row items-center ml-32'}>
+            <div>
+                {
+                    theme === 'light' ?
+                        <Image src={Dark} alt='dark mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick('dark')}/> :
               <Image src={Light} alt='light mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick('light')}/>
           }
         </div>
