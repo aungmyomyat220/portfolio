@@ -14,7 +14,7 @@ const Page = ({theme,onThemeChange,panel}) => {
       panel(true)
     }
   return (
-    <div className={`flex flex-row sm:justify-between w-full max-w-6xl mt-8 font-semibold text-lg cursor-pointer px-7 ${theme === 'dark'?'text-white':'text-black'}`}>
+    <div className={`z-10 ${theme==='dark'?'bg-cyan-950':'bg-white'} fixed top-0 overflow-hidden flex flex-row sm:justify-between w-full max-w-6xl pt-5 pb-2 font-semibold text-lg cursor-pointer px-7 ${theme === 'dark'?'text-white':'text-black'}`}>
       <span>
           <span className={'hover:text-blue-500 hover:transition delay-75 cursor-pointer'}>Aung Myo Myat</span>
           <span className={'text-blue-500 ml-2'}>Dev</span>
@@ -29,18 +29,20 @@ const Page = ({theme,onThemeChange,panel}) => {
           }
         </div>
           <div className={'hidden sm:block'}>
-              <span className={'mr-6'}>About</span>
               <span className={'mr-6'}>
-                    <Link href='#skill'>Skills</Link>
+                <Link href='#about' className={'hover:text-blue-500 delay-75'}>About</Link>
               </span>
               <span className={'mr-6'}>
-                <Link href='#experience'>Experience</Link>
+                    <Link href='#skill' className={'hover:text-blue-500 delay-75'}>Skills</Link>
               </span>
               <span className={'mr-6'}>
-                <Link href='#project'>Projects</Link>
+                <Link href='#experience' className={'hover:text-blue-500 delay-75'}>Experience</Link>
+              </span>
+              <span className={'mr-6'}>
+                <Link href='#project' className={'hover:text-blue-500 delay-75'}>Projects</Link>
               </span>
               <span>
-                <Link href='#contact'>Contact</Link>
+                <Link href='#contact' className={'hover:text-blue-500 delay-75'}>Contact</Link>
               </span>
           </div>
       </div>

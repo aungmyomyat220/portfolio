@@ -22,7 +22,7 @@ const Page = ({theme}) => {
       <div className={'w-full h-screen max-w-6xl flex justify-center items-center'}>
         <div className={'flex justify-center flex-col w-full h-screen items-center'}>
           <span
-              className={`${theme === 'dark' && 'text-white'} font-semibold text-4xl mb-10 text-center ${animate && 'animate-fade-up animate-once animate-duration-[1000ms] animate-delay-500'}'}`} ref={cbRef}>My Recent Works</span>
+              className={`${theme === 'dark' && 'text-white'} font-semibold text-4xl mb-10 text-center pt-5 ${animate && 'animate-fade-up animate-once animate-duration-[1000ms] animate-delay-500'}'}`} ref={cbRef}>My Recent Works</span>
           {/*Projects*/}
           <div
               className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-1 sm:grid-rows-2 gap-7 ${animate && 'animate-fade-right animate-once animate-duration-900 animate-delay-900'}`}>
@@ -66,14 +66,7 @@ const Page = ({theme}) => {
                 <span className={`text-4xl font-serif ${theme === 'dark'?'text-white':'text-black'}`}>E-commerce</span>
               </div>
             </Link>
-
           </div>
-          <span className={`absolute right-0 bottom-0 mb-10 mr-5 rounded-full ${theme==='dark'?'bg-white':'bg-[#adb4bf] animate-bounce'}`}>
-            <a href='#home'
-                className={`w-14 h-14 rounded-full flex justify-center items-center`}>
-                <Image src={arrow} alt='arrow' width={0} height={0} className={'w-5 h-5'}/>
-             </a>
-          </span>
         </div>
       </div>
     </div>

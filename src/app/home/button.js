@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Button = ({theme}) => {
   return (
@@ -11,13 +12,14 @@ const Button = ({theme}) => {
         >
           Download CV
         </button>
-        <button
+        <Link
+          href='#contact'
           className={
             `ml-5 ${theme==='dark'?'bg-transparent':'bg-black'} text-white rounded-full mt-5 py-3 px-4 border ${theme==='dark'?'border-white':'border-black'} text-sm font-semibold transition delay-100 hover:scale-105`
           }
         >
           Contact Info
-        </button>
+        </Link>
       </div>
     </div>
   )

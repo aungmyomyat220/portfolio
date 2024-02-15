@@ -8,7 +8,8 @@ import Buttons from './button'
 const Page = ({theme}) => {
   return (
     <div
-      className={"w-full h-screen sm:h-full max-w-6xl flex flex-col sm:flex-row justify-center items-center sm:mt-28 sm:mb-72 mb-36"}
+      id='home'
+      className={"z-0 w-full h-screen max-w-6xl flex flex-col sm:flex-row justify-center items-center mb-36"}
     >
       <div>
         <Image src={AMM} alt="Profile" className={"rounded-full w-72 h-72 transition delay-100 hover:scale-105"} />
@@ -16,15 +17,15 @@ const Page = ({theme}) => {
 
       <div className={"flex flex-col sm:ml-24 text-center mt-5"}>
         <span className={`${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} font-semibold`}>Hello I&apos;m</span>
-        <span className={`${theme === 'dark'?'text-white':'text-black'} font-bold sm:text-5xl text-4xl my-5`}>
+        <span className={`${theme === 'dark'?'bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 text-transparent':'text-black'} py-2 font-bold sm:text-5xl text-4xl my-5`}>
           Aung Myo Myat
         </span>
           <div className={`${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} font-semibold`}>
             <TypeAnimation
               sequence={[
-                'FullStack Developer',
+                'MERN Stack Developer',
                 1000,
-                'React Developer',
+                'NextJS Developer',
                 1000,
                 'Java Developer',
                 1000,
