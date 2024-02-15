@@ -25,7 +25,7 @@ const Page = ({theme}) => {
 
 
   return (
-    <div className={`w-full h-full flex justify-center items-center relative sm:pb-0 pb-24 mt-40 sm:mt-0 ${theme==='dark'?'text-white':'text-cyan-950'}`} id='project'>
+    <div className={`w-full h-full flex justify-center items-center relative sm:pb-0 pb-24 mt-40 sm:mt-0 ${theme==='dark'?'text-white':'text-cyan-950'}`} id='contact'>
       <div className={'w-full h-screen max-w-6xl flex justify-center items-center'}>
           <div className={'grid grid-cols-2'}>
             <div className={'flex flex-col text-left justify-center'}>

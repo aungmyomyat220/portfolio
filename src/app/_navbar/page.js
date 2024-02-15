@@ -39,7 +39,9 @@ const Page = ({theme,onThemeChange,panel}) => {
               <span className={'mr-6'}>
                 <Link href='#project'>Projects</Link>
               </span>
-              <span>Contact</span>
+              <span>
+                <Link href='#contact'>Contact</Link>
+              </span>
           </div>
       </div>
 
