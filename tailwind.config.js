@@ -5,6 +5,12 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  rules: [
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+    },
+  ],
   theme: {
     extend: {
       fontFamily : {

@@ -11,7 +11,7 @@ const Page = ({theme}) => {
         })
     })
     return (
-        <div className={`relative w-full h-screen flex justify-center items-center sm:mb-56 mb-44 ${theme==='dark'?'text-white': 'text-black'}`} >
+        <div className={`relative w-full h-screen flex justify-center items-center mt-56 sm:mb-56 mb-44 ${theme==='dark'?'text-white': 'text-black'}`} >
             <div className={'w-full h-screen max-w-6xl flex flex-col justify-center items-center'}>
                 <span className={`font-semibold text-4xl mb-10 pt-12`}  id='experience'>My Journey</span>
 

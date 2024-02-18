@@ -5,6 +5,7 @@ import Project from '@/app/project/page'
 import Experience from '@/app/experience/page'
 import TechStack from '@/app/techstack/page'
 import Contact from '@/app/contact/page'
+import Footer from '@/app/_footer/page'
 import {useEffect, useState} from "react";
 import Close from '../../public/image/close.png'
 import Close_White from '../../public/image/close-w.png'
@@ -56,6 +57,7 @@ export default function Home() {
             <Experience theme={theme}></Experience>
             <Project theme={theme}></Project>
             <Contact theme={theme}></Contact>
+            <Footer theme={theme}></Footer>
           </div>
       }
     </>

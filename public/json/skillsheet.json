@@ -1,0 +1,28 @@
+{
+  "frontend" : [
+    {
+      "name" : "React",
+      "level" : "advanced"
+    },
+    {
+      "name" : "NextJS",
+      "level" : "advanced"
+    },
+    {
+      "name" : "HTML",
+      "level" : "advanced"
+    },
+    {
+      "name" : "CSS",
+      "level" : "advanced"
+    },
+    {
+      "name" : "JavaScript",
+      "level" : "advanced"
+    },
+    {
+      "name" : "Tailwind",
+      "level" : "advanced"
+    }
+  ]
+}
