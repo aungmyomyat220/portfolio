@@ -27,15 +27,15 @@ const Page = ({theme}) => {
   return (
     <div className={`w-full h-full flex justify-center items-center relative sm:pb-0 pb-24 mt-40 sm:mt-0 ${theme==='dark'?'text-white':'text-cyan-950'}`} id='contact'>
       <div className={'w-full h-screen max-w-6xl flex justify-center items-center'}>
-          <div className={'grid grid-cols-2'}>
-            <div className={'flex flex-col text-left justify-center'}>
+          <div className={'sm:grid sm:grid-cols-2'}>
+            <div className={'flex flex-col text-left justify-center mx-7'}>
               <span className={'text-5xl mb-3'}>Let&apos;s Chat.</span>
               <span className={'text-5xl mb-5'}>Tell me about your project</span>
               <span className={'flex'}>
                 <span className={'text-orange-400'}>Let&apos;s create something together</span>
                 <Image src={Love} alt='Love' width={0} height={0} className='w-5 h-5 ml-2'/>
               </span>
-              <div className={'px-6 bg-white mt-10 py-5 w-96 rounded-xl flex flex-row drop-shadow-md'}>
+              <div className={'px-3 sm:px-6 bg-white mt-10 py-5 w-80 sm:w-96 rounded-xl flex flex-row drop-shadow-md'}>
                 <span className={'mr-5 flex justify-center items-center'}>
                   <Image src={Email} alt='email' width={40} height={40}/>
                 </span>
@@ -46,7 +46,7 @@ const Page = ({theme}) => {
               </div>
             </div>
 
-            <div className={'flex justify-center items-center'}>
+            <div className={'flex justify-center items-center mt-20'}>
               <div className={`flex flex-col p-7 w-80 h-96 ${theme==='dark'?'bg-white text-cyan-950' : 'bg-cyan-950 text-white'} rounded-xl`}>
                 <div className={'flex justify-start mb-5'}>
                   <span className={'text-xl justify-start'}>Send us a message</span>
@@ -59,8 +59,8 @@ const Page = ({theme}) => {
                   <input type="text" name='subject' onChange={handleChange} value={emailData.subject}
                          className={'outline outline-0 border border-black py-2 px-3 rounded-md text-sm mb-5 w-full'}
                          placeholder={'Subject'}/>
-                  <textarea name="content" id="" cols="29" rows="4" onChange={handleChange} value={emailData.content}
-                            className={'border border-black rounded-md p-2 resize-none placeholder:text-sm'}
+                  <textarea name="content" rows="4" onChange={handleChange} value={emailData.content}
+                            className={'w-64 border border-black rounded-md p-2 resize-none placeholder:text-sm'}
                             placeholder={'Tell us more about your project'}></textarea>
 
                   <button id="send-btn" className={'mt-5'} onClick={handleClick}>

@@ -29,7 +29,7 @@ const Page = ({theme}) => {
                             </svg>
                         </div>
                         <div
-                            className={`${animate && 'animate-fade-right animate-once animate-duration-[1400ms] animate-delay-300'} pb-12 timeline-start sm:text-right text-left timeline-snap-icon flex flex-col`}>
+                            className={`${animate && 'sm:animate-fade-right animate-fade-left animate-once animate-duration-[1400ms] animate-delay-300'} pb-12 timeline-start sm:text-right text-left timeline-snap-icon flex flex-col`}>
                             <span className='italic'>2014-2020</span>
                             <span className='font-bold text-xl'>University Student</span>
                             <span className={'text-[#5F9DF7]'}>Mawlamyine Technology University</span>
@@ -60,7 +60,7 @@ const Page = ({theme}) => {
                     <li>
                         <hr/>
                         <div
-                            className={`timeline-start sm:text-right text-left timeline-snap-icon flex flex-col ${animate && 'animate-fade-right animate-once animate-duration-[1400ms] animate-delay-300'}`}>
+                            className={`timeline-start sm:text-right text-left timeline-snap-icon flex flex-col ${animate && 'sm:animate-fade-right animate-fade-left animate-once animate-duration-[1400ms] animate-delay-300'}`}>
                             <span className='italic'>2023-Present</span>
                             <span className='font-bold text-xl'>Web Developer</span>
                             <span className={'text-[#5F9DF7]'}>GIC Myanmar</span>

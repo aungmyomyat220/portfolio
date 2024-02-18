@@ -45,7 +45,7 @@ export default function Home() {
               <Link href='#skill' className={`animate-fade-up animate-once animate-duration-[1000ms] animate-delay-500 border ${theme==='dark'? 'border-white': 'border-black'} mb-5 px-20 py-2 text-center`} onClick={()=>setPanel(false)}>Skills</Link>
               <Link href='#experience' className={`animate-fade-up animate-once animate-duration-[1000ms] animate-delay-700 border ${theme==='dark'? 'border-white': 'border-black'} mb-5 px-20 py-2 text-center`} onClick={()=>setPanel(false)}>Experiences</Link>
               <Link href='#project'  className={`animate-fade-up animate-once animate-duration-[1000ms] animate-delay-1000 border ${theme==='dark'? 'border-white': 'border-black'} mb-5 px-20 py-2 text-center`} onClick={()=>setPanel(false)}>Projects</Link>
-              <Link href='#about' className={`animate-fade-up animate-once animate-duration-[1000ms] animate-delay-1000 border ${theme==='dark'? 'border-white': 'border-black'} mb-5 px-20 py-2 text-center`} onClick={()=>setPanel(false)}>Contact</Link>
+              <Link href='#contact' className={`animate-fade-up animate-once animate-duration-[1000ms] animate-delay-1000 border ${theme==='dark'? 'border-white': 'border-black'} mb-5 px-20 py-2 text-center`} onClick={()=>setPanel(false)}>Contact</Link>
             </div>
           </div> :
           <div id='home'
