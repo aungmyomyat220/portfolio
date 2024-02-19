@@ -3,15 +3,17 @@ import Link from 'next/link'
 
 const Button = ({theme}) => {
   return (
-    <div>
+    <div className={'mt-8'}>
       <div>
-        <button
+        <Link
+          href='https://drive.google.com/file/d/1GCx00ooykx07UB3G2Gh8IrWF90owbMTD/view?usp=sharing'
+          target='_blank'
           className={
             `${theme==='dark'&&"bg-white"} rounded-full mt-5 py-3 px-4 border border-black text-sm font-semibold transition delay-100 hover:scale-105`
           }
         >
           Download CV
-        </button>
+        </Link>
         <Link
           href='#contact'
           className={

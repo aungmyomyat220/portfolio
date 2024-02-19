@@ -30,7 +30,7 @@ const Page = ({theme,onThemeChange,panel}) => {
             </div>
           <div className={'hidden sm:block'}>
               <span className={'mr-6'}>
-                <Link href='#about' className={'hover:text-blue-500 delay-75'}>About</Link>
+                <Link href='#about' className={'hover:text-blue-500 delay-75'}>Home</Link>
               </span>
               <span className={'mr-6'}>
                     <Link href='#skill' className={'hover:text-blue-500 delay-75'}>Skills</Link>

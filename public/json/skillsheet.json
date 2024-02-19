@@ -2,27 +2,67 @@
   "frontend" : [
     {
       "name" : "React",
-      "level" : "advanced"
+      "level" : "Advanced"
     },
     {
       "name" : "NextJS",
-      "level" : "advanced"
+      "level" : "Intermediate"
     },
     {
       "name" : "HTML",
-      "level" : "advanced"
+      "level" : "Advanced"
     },
     {
       "name" : "CSS",
-      "level" : "advanced"
+      "level" : "Intermediate"
     },
     {
       "name" : "JavaScript",
-      "level" : "advanced"
+      "level" : "Advanced"
     },
     {
       "name" : "Tailwind",
-      "level" : "advanced"
+      "level" : "Advanced"
+    }
+  ],
+  "backend" : [
+    {
+      "name" : "NodeJS",
+      "level" : "Advanced"
+    },
+    {
+      "name" : "ExpressJS",
+      "level" : "Advanced"
+    },
+    {
+      "name" : "Python",
+      "level" : "Basic"
+    },
+    {
+      "name" : "MongoDB",
+      "level" : "Intermediate"
+    },
+    {
+      "name" : "MySQL",
+      "level" : "Intermediate"
+    },
+    {
+      "name" : "Java",
+      "level" : "Intermediate"
+    }
+  ],
+  "tools" : [
+    {
+      "name" : "PostMan",
+      "level" : "Advanced"
+    },
+    {
+      "name" : "Docker",
+      "level" : "Intermediate"
+    },
+    {
+      "name" : "Git",
+      "level" : "Advanced"
     }
   ]
 }
