@@ -204,20 +204,6 @@ const Page = ({theme}) => {
                                   </div>
                               </div>
                           </div>
-
-                          {/*2nd Column*/}
-                          <div>
-                              {/*1st Row*/}
-                              <div className={'flex flex-row'}>
-                                  <div className={'mr-2 flex mt-1'}>
-                                      <Image src={mark} alt='mark' className={'w-5 h-5'}/>
-                                  </div>
-                                  <div className={'flex flex-col'}>
-                                      <span className={'font-bold text-xl'}>Python</span>
-                                      <span className={'text-gray-300 text-xs'}>Basic</span>
-                                  </div>
-                              </div>
-                          </div>
                       </div>
                   </div>
 
