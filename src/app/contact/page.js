@@ -1,10 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Love from "../../../public/image/i-love-you.png";
-import GoogleMap from "../../../public/image/maps-and-flags.png";
 import Rocket from "../../../public/image/startup.png";
 import Image from "next/image";
-
+import { sendMailHook } from '../../../hook/sendMailHook'
 const Page = ({ theme }) => {
   const [emailData, setEmailData] = useState({
     email: "",
@@ -19,7 +18,10 @@ const Page = ({ theme }) => {
     }));
   };
 
-  const handleClick = () => {};
+  const handleClick = async() => {
+    const response = await sendMailHook(emailData)
+    console.log(response.statusCode)
+  };
 
   return (
     <div
@@ -47,24 +49,9 @@ const Page = ({ theme }) => {
                 className="w-5 h-5 ml-2"
               />
             </span>
-
-            <div className="diff aspect-[15/8] rounded-xl mt-10">
-              <div className="diff-item-1">
-                <div className="bg-base-200 text-9xl font-black grid place-content-center">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30558.752418851513!2d96.10597783165991!3d16.784432563870954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb0dddf12fa9%3A0x2176e236e4fa957d!2sAhlone%20Township%2C%20Yangon!5e0!3m2!1sen!2smm!4v1708319503306!5m2!1sen!2smm"
-                    width="500" height="260" loading="lazy"></iframe>
-                </div>
-              </div>
-              <div className="diff-item-2">
-                <div
-                  className="flex flex-row items-center bg-gray-500 border border-gray-500 text-primary-content text-7xl sm:text-9xl font-black place-content-center">
-                  <Image src={GoogleMap} alt="Map" className="sm:w-20 sm:h-20 w-14 h-14"></Image>
-                  <span className={'text-white'}>MAP</span>
-                </div>
-              </div>
-              <div className="diff-resizer bg-orange-400"></div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30558.752418851513!2d96.10597783165991!3d16.784432563870954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb0dddf12fa9%3A0x2176e236e4fa957d!2sAhlone%20Township%2C%20Yangon!5e0!3m2!1sen!2smm!4v1708319503306!5m2!1sen!2smm"
+              width="450" height="260" loading="lazy" className={'mt-5 rounded-lg'}></iframe>
           </div>
           <div className={"flex justify-center items-center mt-20"}>
             <div
