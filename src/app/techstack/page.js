@@ -72,7 +72,7 @@ const Page = ({theme}) => {
                   </div>
 
                   <div className={`border border-white rounded-xl flex flex-col items-center py-5 h-80 ${animate && 'animate-fade-left animate-once animate-duration-[1000ms] animate-delay-500'}'}`}>
-                      <div className={'mb-8 text-lg text-blue-500 font-bold'}>Tools</div>
+                      <div className={'mb-8 text-lg text-blue-500 font-bold'}>Others</div>
                       <div className={'grid grid-cols-2 gap-7'}>
                           {
                               tools.map((skill)=> {

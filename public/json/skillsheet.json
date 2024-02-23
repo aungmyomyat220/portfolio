@@ -63,6 +63,14 @@
     {
       "name" : "Git",
       "level" : "Advanced"
+    },
+    {
+      "name" : "AWS",
+      "level" : "Basic"
+    },
+    {
+      "name" : "GitLab",
+      "level" : "Intermediate"
     }
   ]
 }
