@@ -4,7 +4,15 @@ import Love from "../../../public/image/i-love-you.png";
 import Rocket from "../../../public/image/startup.png";
 import Image from "next/image";
 import { sendMailHook } from '../../../hook/sendMailHook'
+import { RocketIcon } from "@radix-ui/react-icons"
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
+
 const Page = ({ theme }) => {
+  const [noti, showNoti] = useState(false);
   const [emailData, setEmailData] = useState({
     email: "",
     subject: "",
@@ -19,8 +27,15 @@ const Page = ({ theme }) => {
   };
 
   const handleClick = async() => {
-    const response = await sendMailHook(emailData)
-    console.log(response.statusCode)
+    if (emailData.email.trim() === "" || emailData.subject.trim() === "" || emailData.content.trim() === "") {
+      const response = await sendMailHook(emailData)
+      if(response.statusCode === 200){
+        showNoti(true)
+        setTimeout(() => {
+          showNoti(false);
+        }, 4000);
+      }
+    }
   };
 
   return (
@@ -30,8 +45,20 @@ const Page = ({ theme }) => {
       }`}
       id="contact"
     >
+      {
+          noti &&
+          <div className={'z-30 absolute top-0 right-0 mt-5 mr-5 w-80 animate-fade-left animate-once animate-duration-[800ms] animate-delay-300'}>
+            <Alert>
+              <RocketIcon className="h-4 w-4"/>
+              <AlertTitle>Email Sent!</AlertTitle>
+              <AlertDescription>
+                We will contact you.
+              </AlertDescription>
+            </Alert>
+          </div>
+      }
       <div
-        className={"w-full h-screen max-w-6xl flex justify-center items-center"}
+          className={"w-full h-screen max-w-6xl flex justify-center items-center"}
       >
         <div className={"sm:grid sm:grid-cols-2"}>
           <div className={"flex flex-col text-left justify-center mx-7"}>

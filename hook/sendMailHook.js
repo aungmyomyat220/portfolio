@@ -1,13 +1,15 @@
 import axios from 'axios';
 
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 export const sendMailHook = async (emailData) => {
   try {
-    console.log("Email Data===>", emailData);
-    const response = await axios.post(`http://localhost:8000/portfolio_mailservice`, emailData, {
+    const response = await axios.post(`${API_BASE_URL}/portfolio_mailservice`, emailData, {
       headers: {
         'Content-Type': 'application/json',
-        'API-KEY': '927e0f9a-4451-4210-8dd1-eb47f8ca9089'
-      }
+        'Access-Control-Allow-Origin': true,
+        'API_KEY': apiKey
+      },
     });
 
     if (response.status !== 200) {
