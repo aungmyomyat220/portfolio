@@ -15,7 +15,7 @@ const Page = ({ theme }) => {
   const [noti, showNoti] = useState(false);
   const [emailData, setEmailData] = useState({
     email: "",
-    subject: "",
+    name: "",
     content: "",
   });
   const handleChange = (e) => {
@@ -36,7 +36,7 @@ const Page = ({ theme }) => {
         }, 4000);
         setEmailData({
           email: "",
-          subject: "",
+          name: "",
           content: "",
         })
       }
@@ -112,13 +112,13 @@ const Page = ({ theme }) => {
                 />
                 <input
                   type="text"
-                  name="subject"
+                  name="name"
                   onChange={handleChange}
-                  value={emailData.subject}
+                  value={emailData.name}
                   className={
                     "outline outline-0 border border-black py-2 px-3 rounded-md text-sm mb-5 w-full focus:border-2 focus:border-blue-500"
                   }
-                  placeholder={"Subject"}
+                  placeholder={"Your name"}
                 />
                 <textarea
                   name="content"
