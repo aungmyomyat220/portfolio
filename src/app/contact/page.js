@@ -27,13 +27,18 @@ const Page = ({ theme }) => {
   };
 
   const handleClick = async() => {
-    if (emailData.email.trim() === "" || emailData.subject.trim() === "" || emailData.content.trim() === "") {
+    if (emailData.email || emailData.subject|| emailData.content) {
       const response = await sendMailHook(emailData)
       if(response.statusCode === 200){
         showNoti(true)
         setTimeout(() => {
           showNoti(false);
         }, 4000);
+        setEmailData({
+          email: "",
+          subject: "",
+          content: "",
+        })
       }
     }
   };
@@ -101,7 +106,7 @@ const Page = ({ theme }) => {
                   onChange={handleChange}
                   value={emailData.email}
                   className={
-                    "outline outline-0 border border-black py-2 px-3 rounded-md text-sm mb-5 w-full"
+                    "outline outline-0 border border-black py-2 px-3 rounded-md text-sm mb-5 w-full focus:border-2 focus:border-blue-500"
                   }
                   placeholder={"Email Address"}
                 />
@@ -111,7 +116,7 @@ const Page = ({ theme }) => {
                   onChange={handleChange}
                   value={emailData.subject}
                   className={
-                    "outline outline-0 border border-black py-2 px-3 rounded-md text-sm mb-5 w-full"
+                    "outline outline-0 border border-black py-2 px-3 rounded-md text-sm mb-5 w-full focus:border-2 focus:border-blue-500"
                   }
                   placeholder={"Subject"}
                 />
@@ -121,7 +126,7 @@ const Page = ({ theme }) => {
                   onChange={handleChange}
                   value={emailData.content}
                   className={
-                    "w-64 border border-black rounded-md p-2 resize-none placeholder:text-sm"
+                    "outline outline-0 w-64 border border-black rounded-md p-2 resize-none placeholder:text-sm focus:border-2 focus:border-blue-500"
                   }
                   placeholder={"Tell us more about your project"}
                 ></textarea>
