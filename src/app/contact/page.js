@@ -29,7 +29,7 @@ const Page = ({ theme }) => {
   };
 
   const handleClick = async() => {
-    if (emailData.email || emailData.subject|| emailData.content) {
+    if (emailData.email && emailData.name && emailData.content) {
       setLoading(true)
       const response = await sendMailHook(emailData)
       if(response.statusCode === 200){
