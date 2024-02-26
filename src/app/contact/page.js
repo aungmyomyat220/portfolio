@@ -10,7 +10,6 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/alert"
-import {log} from "next/dist/server/typescript/utils";
 
 const Page = ({ theme }) => {
   const [noti, showNoti] = useState(false);
