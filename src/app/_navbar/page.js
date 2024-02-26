@@ -5,7 +5,12 @@ import Image from 'next/image'
 import Light from '../../../public/image/sun.png'
 import Dark from '../../../public/image/night-mode.png'
 import Link from 'next/link'
+import {useTranslations} from 'next-intl';
+import {useRouter} from "next/navigation";
+
 const Page = ({theme,onThemeChange,panel}) => {
+    const router = useRouter()
+    const t = useTranslations('Index')
     const handleClick = (data) => {
       onThemeChange(data);
     };
@@ -28,23 +33,26 @@ const Page = ({theme,onThemeChange,panel}) => {
               <Image src={Light} alt='light mode' className={'w-5 h-5 sm:mr-5'} onClick={()=>handleClick('light')}/>
                 }
             </div>
-          <div className={'hidden sm:block'}>
+            <div className={'hidden sm:block'}>
               <span className={'mr-6'}>
-                <Link href='#about' className={'hover:text-blue-500 delay-75'}>Home</Link>
+                <Link href='#about' className={'hover:text-blue-500 delay-75'}>{t('Home')}</Link>
               </span>
-              <span className={'mr-6'}>
-                    <Link href='#skill' className={'hover:text-blue-500 delay-75'}>Skills</Link>
+                <span className={'mr-6'}>
+                    <Link href='#skill' className={'hover:text-blue-500 delay-75'}>{t('Skills')}</Link>
               </span>
-              <span className={'mr-6'}>
-                <Link href='#experience' className={'hover:text-blue-500 delay-75'}>Experience</Link>
+                <span className={'mr-6'}>
+                <Link href='#experience' className={'hover:text-blue-500 delay-75'}>{t('Experience')}</Link>
               </span>
-              <span className={'mr-6'}>
-                <Link href='#project' className={'hover:text-blue-500 delay-75'}>Projects</Link>
+                <span className={'mr-6'}>
+                <Link href='#project' className={'hover:text-blue-500 delay-75'}>{t('Projects')}</Link>
               </span>
-              <span>
-                <Link href='#contact' className={'hover:text-blue-500 delay-75'}>Contact</Link>
+                <span className={'mr-6'}>
+                <Link href='#contact' className={'hover:text-blue-500 delay-75'}>{t('Contact')}</Link>
               </span>
-          </div>
+                <span>
+                <span className={'hover:text-blue-500 delay-75'} onClick={()=>router.push('/jp')}>jp</span>
+              </span>
+            </div>
             {theme === 'dark' ?
                 <div className={'sm:hidden ml-3'}>
                     <Image src={MenuBarWhite} alt='menu bar' className={'w-7 h-7'} onClick={handlePanel}/>
