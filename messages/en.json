@@ -4,7 +4,13 @@
       "Home": "Home",
       "Experience": "Experience",
       "Projects": "Projects",
-      "Contact": "Contact"
+      "Contact": "Contact",
+      "english" : "en",
+      "japan" : "jp",
+      "selectLanguage" : "en",
+      "intro" : "Hello I'm",
+      "name" : "Aung Myo Myat",
+      "download" : "Download CV"
     }
   }
 

@@ -5,7 +5,9 @@ import AMM from "../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
 import Icon from '@/app/_icon/page.js'
 import Buttons from './button'
+import {useTranslations} from "next-intl";
 const Page = ({theme}) => {
+    const t = useTranslations('Index')
   return (
     <div
       id='home'
@@ -16,9 +18,9 @@ const Page = ({theme}) => {
       </div>
 
       <div className={"flex flex-col sm:ml-24 text-center mt-5"}>
-        <span className={`${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} font-semibold`}>Hello I&apos;m</span>
+        <span className={`${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} font-semibold`}>{t('intro')}</span>
         <span className={`${theme === 'dark'?'bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 text-transparent':'text-black'} py-2 font-bold sm:text-5xl text-4xl my-5`}>
-          Aung Myo Myat
+          {t('name')}
         </span>
           <div className={`${theme==='dark' ? 'text-gray-400' : 'text-gray-600'} font-semibold`}>
             <TypeAnimation

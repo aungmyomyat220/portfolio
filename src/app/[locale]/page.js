@@ -12,7 +12,9 @@ import Close_White from '../../../public/image/close-w.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import {useTranslations} from 'next-intl';
+import {useParams} from "next/navigation";
 export default function Home() {
+    const {locale} = useParams()
     const t = useTranslations('Index');
     const [theme, setTheme] = useState('dark');
     const [panel, setPanel] = useState(false);
@@ -66,7 +68,7 @@ export default function Home() {
                   </div> :
                   <div id='home'
                        className={`${theme === 'dark' ? 'bg-cyan-950' : 'bg-white'} w-full flex flex-col justify-center items-center font-poppin scroll-smooth`}>
-                      <NavBar theme={theme} panel={showPanel} onThemeChange={toggleTheme}></NavBar>
+                      <NavBar theme={theme} panel={showPanel} onThemeChange={toggleTheme} language={locale}></NavBar>
                       <HomePage theme={theme}></HomePage>
                       <TechStack theme={theme}></TechStack>
                       <Experience theme={theme}></Experience>

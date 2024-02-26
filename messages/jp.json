@@ -4,7 +4,13 @@
     "Home": "ホーム",
     "Experience": "経験",
     "Projects": "プロジェクト",
-    "Contact": "お問い合わせ"
+    "Contact": "お問い合わせ",
+    "english" : "英語",
+    "japan" : "日本語",
+    "selectLanguage" : "jp",
+    "intro" : "こんにちは 私は",
+    "name" : "アウンミョーミャッ",
+    "download" : "ダウンロード"
   }
 }
 

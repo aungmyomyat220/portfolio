@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
+import {useTranslations} from "next-intl";
 
 const Button = ({theme}) => {
+    const t = useTranslations('Index')
   return (
     <div className={'mt-8'}>
       <div>
@@ -12,7 +14,7 @@ const Button = ({theme}) => {
             `${theme==='dark'&&"bg-white"} rounded-full mt-5 py-3 px-4 border border-black text-sm font-semibold transition delay-100 hover:scale-105`
           }
         >
-          Download CV
+            {t('download')}
         </Link>
         <Link
           href='#contact'
@@ -20,7 +22,7 @@ const Button = ({theme}) => {
             `ml-5 ${theme==='dark'?'bg-transparent':'bg-black'} text-white rounded-full mt-5 py-3 px-4 border ${theme==='dark'?'border-white':'border-black'} text-sm font-semibold transition delay-100 hover:scale-105`
           }
         >
-          Contact Info
+            {t('Contact')}
         </Link>
       </div>
     </div>
