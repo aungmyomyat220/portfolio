@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from "next/image";
-import GitHub from "../../../public/image/github.png"
-import Linkin from "../../../public/image/linkedin.png"
-import '../../../public/css/top.css'
+import GitHub from "../../../../public/image/github.png"
+import Linkin from "../../../../public/image/linkedin.png"
+import '../../../../public/css/top.css'
 import Link from "next/link";
 const MyComponent = ({theme}) => {
     return (

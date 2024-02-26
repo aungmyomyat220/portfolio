@@ -1,8 +1,8 @@
 'use client'
 import React, {useState} from 'react';
-import {useIntersectionObserver} from "@/app/_animation/animation";
+import {useIntersectionObserver} from "@/app/[locale]/_animation/animation";
 import Image from "next/image";
-import arrow from "../../../public/image/up-arrow.png";
+import arrow from "../../../../public/image/up-arrow.png";
 const Page = ({theme}) => {
     const [animate,setAnimate] = useState(false)
     const cbRef = useIntersectionObserver({ threshold: 1 }, (entries) => {

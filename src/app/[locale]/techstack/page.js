@@ -1,10 +1,10 @@
 'use client'
 import React, {useState} from 'react';
-import mark_dark from "../../../public/image/guarantee.png"
-import mark_white from "../../../public/image/guarantee_white.png"
-import {useIntersectionObserver} from "@/app/_animation/animation";
+import mark_dark from "../../../../public/image/guarantee.png"
+import mark_white from "../../../../public/image/guarantee_white.png"
+import {useIntersectionObserver} from "@/app/[locale]/_animation/animation";
 import Image from "next/image";
-import SkillSheet from '.././../../public/json/skillsheet.json'
+import SkillSheet from '../../../../public/json/skillsheet.json'
 
 const Page = ({theme}) => {
     let mark = theme === 'dark' ? mark_white : mark_dark

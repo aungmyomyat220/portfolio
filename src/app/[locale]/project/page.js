@@ -1,12 +1,12 @@
 'use client'
 import React, {useState} from 'react'
 import Image from 'next/image'
-import mintheinkha from "../../../public/image/mintheinkhalogo.png";
-import myblog from "../../../public/image/myblog.jpg";
-import os from "../../../public/image/os.jpg";
-import chat from "../../../public/image/chat.jpg";
-import arrow from "../../../public/image/up-arrow.png";
-import {useIntersectionObserver} from "@/app/_animation/animation";
+import mintheinkha from "../../../../public/image/mintheinkhalogo.png";
+import myblog from "../../../../public/image/myblog.jpg";
+import os from "../../../../public/image/os.jpg";
+import chat from "../../../../public/image/chat.jpg";
+import arrow from "../../../../public/image/up-arrow.png";
+import {useIntersectionObserver} from "@/app/[locale]/_animation/animation";
 import Link from "next/link";
 
 const Page = ({theme}) => {

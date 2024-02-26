@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import Love from "../../../public/image/i-love-you.png";
-import Rocket from "../../../public/image/startup.png";
+import Love from "../../../../public/image/i-love-you.png";
+import Rocket from "../../../../public/image/startup.png";
 import Image from "next/image";
-import { sendMailHook } from '../../../hook/sendMailHook'
+import { sendMailHook } from '../../../../hook/sendMailHook'
 import { RocketIcon } from "@radix-ui/react-icons"
 import {
   Alert,

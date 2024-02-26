@@ -1,9 +1,9 @@
 'use client'
 import React from "react";
 import Image from "next/image";
-import AMM from "../../../public/image/aungmyomyat.jpg";
+import AMM from "../../../../public/image/aungmyomyat.jpg";
 import { TypeAnimation } from 'react-type-animation';
-import Icon from '@/app/_icon/page.js'
+import Icon from '@/app/[locale]/_icon/page.js'
 import Buttons from './button'
 import {useTranslations} from "next-intl";
 const Page = ({theme}) => {

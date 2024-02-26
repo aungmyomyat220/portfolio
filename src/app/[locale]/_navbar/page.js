@@ -1,11 +1,11 @@
 'use client'
-import MenuBar from '../../../public/image/menu.png'
-import MenuBarWhite from '../../../public/image/menu-w.png'
+import MenuBar from '../../../../public/image/menu.png'
+import MenuBarWhite from '../../../../public/image/menu-w.png'
 import Image from 'next/image'
-import Light from '../../../public/image/sun.png'
-import Dark from '../../../public/image/night-mode.png'
-import eng from '../../../public/image/eng.png'
-import jp from '../../../public/image/japan.png'
+import Light from '../../../../public/image/sun.png'
+import Dark from '../../../../public/image/night-mode.png'
+import eng from '../../../../public/image/eng.png'
+import jp from '../../../../public/image/japan.png'
 import Link from 'next/link'
 import {useTranslations} from 'next-intl';
 import {useRouter} from "next/navigation";
