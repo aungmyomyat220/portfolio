@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import Image from "next/image";
-import AMM from "../../../../public/image/aungmyomyat.jpg";
+import AMM from "../../../../public/image/profile.jpg";
 import { TypeAnimation } from 'react-type-animation';
 import Icon from '@/app/[locale]/_icon/page.js'
 import Buttons from './button'
