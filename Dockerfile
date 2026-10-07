@@ -1,26 +1,17 @@
-# Use official Node.js image
-FROM node:18-alpine
-
-# Set working directory
+FROM node:24-alpine AS build
 WORKDIR /app
-
-# Copy package files
-COPY package.json yarn.lock* package-lock.json* ./
-
-# Install dependencies
-RUN npm install
-
-# Copy all files
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
-
-# Build the application
 RUN npm run build
 
-# Expose the port
-EXPOSE 3000
-
-# Set environment variables
+FROM node:24-alpine AS runtime
+WORKDIR /app
 ENV NODE_ENV=production
-
-# Start the application
-CMD ["npm", "start"]
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
+COPY --from=build /app/public ./public
+USER node
+EXPOSE 3000
+ENV HOSTNAME=0.0.0.0
+CMD ["node", "server.js"]
