@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aung Myo Myat — Portfolio
 
-## Getting Started
+A responsive English/Japanese portfolio built with Next.js, React and next-intl. Includes a CSS 3D cube and orbital animation, light/dark themes, selected projects, experience and contact form. Motion is disabled when visitors request reduced motion.
 
-First, run the development server:
+## Development
 
-```bash
+Use Node.js 22 or later (Docker uses Node.js 24).
+
+```sh
+npm ci
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000/en or http://localhost:3000/jp.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Contact configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Set `API_BASE_URL` and `API_KEY` in your hosting environment, then redeploy. The server forwards messages to `${API_BASE_URL}/portfolio_mailservice`, preserving the existing mail-service contract (`statusCode: 200`). These variables must not use the `NEXT_PUBLIC_` prefix. Rotate the previous public API key if it was deployed.
 
-## Learn More
+Without configuration, the form reports a delivery error and provides LinkedIn as an alternative. Live mail delivery requires your existing external service and cannot be verified without its credentials.
 
-To learn more about Next.js, take a look at the following resources:
+## Checks and production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm run lint
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```sh
+docker build -t amm-portfolio .
+docker run --rm -p 3000:3000 --env-file .env.local amm-portfolio
+```
 
-## Deploy on Vercel
+The Docker image uses a standalone Next.js build and runs as a non-root user. Do not include local environment files in the image.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Edit `src/app/[locale]/page.js` for portfolio content and `globals.css` for appearance. Existing project images, CV and social links are preserved. Chat App and E-commerce link to GitHub because the old implementation reused the blog URL; replace them with verified live project URLs when available. `/jp` is preserved for existing links; its HTML language is correctly marked as Japanese (`ja`).
+
+All retained dependencies were upgraded to current stable versions at implementation time. ESLint uses the latest compatible 9.x version because Next.js's React/accessibility lint plugins currently declare peer support through ESLint 9.
